@@ -1,5 +1,5 @@
 <?php
-include_once "cost_strategy.php";
+//include_once "cost_strategy.php";
 
 abstract class Lesson
 {

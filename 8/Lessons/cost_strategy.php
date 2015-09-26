@@ -1,5 +1,5 @@
 <?php
-include_once 'lessons.php';
+//include_once 'lessons.php';
 
 abstract class CostStrategy
 {

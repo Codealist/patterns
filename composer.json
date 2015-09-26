@@ -1,0 +1,7 @@
+{
+  "autoload": {
+    "classmap": [
+      "8/"
+    ]
+  }
+}
