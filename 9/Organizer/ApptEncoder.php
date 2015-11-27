@@ -7,14 +7,14 @@ abstract class ApptEncoder
 
 class BloggsApptEncoder extends ApptEncoder
 {
-    function encode(){
+    public function encode(){
         return "Appointment Encoded with BloggsCal format \n";
     }
 }
 
 class MegaApptEncoder extends ApptEncoder
 {
-    function encode(){
+    public function encode(){
         return "Appointment Encoded with MegaCal format \n";
     }
 }

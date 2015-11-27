@@ -16,7 +16,10 @@ abstract class CommsManager
 
 class BloggsCommsManager extends CommsManager
 {
-
+    /**
+     * @param integer $flag
+     * @return BloggsApptEncoder|BloggsContactsEncoder|BloggsTtdEncoder
+     */
     public function make( $flag )
     {
         switch ( $flag ){
@@ -26,19 +29,18 @@ class BloggsCommsManager extends CommsManager
             case CommsManager::TTD:
                 $enc = new BloggsTtdEncoder();
                 break;
-            case CommsManager::CONTACT:
+            default:
                 $enc = new BloggsContactsEncoder();
-                break;
         }
         return $enc;
     }
 
-    function getHeaderText()
+    public function getHeaderText()
     {
         return "BloggsCal Header text";
     }
 
-    function getFooterText()
+    public function getFooterText()
     {
         return "BloggsCal Footer text";
     }
@@ -46,6 +48,10 @@ class BloggsCommsManager extends CommsManager
 
 class MegaCommsManager extends CommsManager
 {
+    /**
+     * @param integer $flag
+     * @return MegaApptEncoder|MegaContactsEncoder|MegaTtdEncoder
+     */
     public function make( $flag )
     {
         switch ( $flag ){
@@ -55,19 +61,18 @@ class MegaCommsManager extends CommsManager
             case CommsManager::TTD:
                 $enc = new MegaTtdEncoder();
                 break;
-            case CommsManager::CONTACT:
+            default:
                 $enc = new MegaContactsEncoder();
-                break;
         }
         return $enc;
     }
 
-    function getHeaderText()
+    public function getHeaderText()
     {
         return "MegaCal Header text";
     }
 
-    function getFooterText()
+    public function getFooterText()
     {
         return "MegaCal Footer text";
     }
