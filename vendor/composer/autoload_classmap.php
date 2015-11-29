@@ -6,8 +6,17 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'ApptEncoder' => $baseDir . '/9/Organizer/apptencoder.class.php',
+    'Archer' => $baseDir . '/10/Civilization/Leaf.php',
+    'Army' => $baseDir . '/10/Civilization/CompositeUnit.php',
+    'BloggsApptEncoder' => $baseDir . '/9/Organizer/apptencoder.class.php',
+    'BloggsCommsManager' => $baseDir . '/9/Organizer/commsmanager.class.php',
+    'Cavalry' => $baseDir . '/10/Civilization/Leaf.php',
+    'CommsManager' => $baseDir . '/9/Organizer/commsmanager.class.php',
+    'CompositeUnit' => $baseDir . '/10/Civilization/CompositeUnit.php',
     'CostStrategy' => $baseDir . '/8/Lessons/cost_strategy.php',
     'FixedCostStrategy' => $baseDir . '/8/Lessons/cost_strategy.php',
+    'LaserCannonUnit' => $baseDir . '/10/Civilization/Leaf.php',
     'Lecture' => $baseDir . '/8/Lessons/lessons.php',
     'Lesson' => $baseDir . '/8/Lessons/lessons.php',
     'MailNotifier' => $baseDir . '/8/Lessons/reg.php',
@@ -16,4 +25,7 @@ return array(
     'Seminar' => $baseDir . '/8/Lessons/lessons.php',
     'TextNotifier' => $baseDir . '/8/Lessons/reg.php',
     'TimedCostStrategy' => $baseDir . '/8/Lessons/cost_strategy.php',
+    'TroopCarrier' => $baseDir . '/10/Civilization/CompositeUnit.php',
+    'Unit' => $baseDir . '/10/Civilization/Unit.php',
+    'UnitScript' => $baseDir . '/10/Civilization/UnitScript.php',
 );

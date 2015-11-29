@@ -12,17 +12,17 @@ require ROOT."/vendor/autoload.php";
  * @param $chapter
  * @throws Exception
  */
-function includeIndexFile( $chapter )
+function includeIndexFile( $chapter, $topic )
 {
-    if( file_exists(ROOT."/{$chapter}/index.php") ){
-        include ROOT."/{$chapter}/index.php";
+    if( file_exists(ROOT."/{$chapter}/{$topic}/index.php") ){
+        include ROOT."/{$chapter}/{$topic}/index.php";
     } else {
         throw new Exception("Sorry, such file hadn't been created yet");
     }
 }
 
 try{
-    includeIndexFile( $_GET['chapter'] );
+    includeIndexFile( $_GET['chapter'], $_GET['topic'] );
 } catch (Exception $e) {
     echo $e->getMessage();
 

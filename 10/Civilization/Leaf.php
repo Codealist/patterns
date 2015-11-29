@@ -22,3 +22,13 @@ class LaserCannonUnit extends Unit
     }
 }
 
+class Cavalry extends Unit
+{
+    /**
+     * @return int
+     */
+    public function bombardStrength()
+    {
+        return 20;
+    }
+}

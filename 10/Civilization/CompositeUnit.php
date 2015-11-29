@@ -4,6 +4,14 @@ abstract class CompositeUnit extends Unit
 {
     abstract public function addUnit( Unit $unit );
     abstract public function removeUnit( Unit $unit );
+
+    /**
+     * @return CompositeUnit
+     */
+    public function getComposite()
+    {
+        return $this;
+    }
 }
 
 
@@ -15,11 +23,15 @@ class TroopCarrier extends CompositeUnit
     /**
      * @param Unit $unit
      * @return $this|void
+     * @throws Exception
      */
     public function addUnit( Unit $unit )
     {
         if (in_array($unit, $this->units, true)) {
             return $this;
+        }
+        if ($unit instanceof Cavalry) {
+            throw new Exception("TroopCarrier can't take the Cavalry on board");
         }
         array_push($this->units, $unit);
         return $this;

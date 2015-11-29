@@ -1,6 +1,6 @@
 <?php
 
-//TODO 214 page
+//TODO 216-217 page
 
 //main army
 $army = new Army();
@@ -18,3 +18,8 @@ $army->addUnit($sub_army);
 
 
 echo "Attack power is equal to: ". $army->bombardStrength();
+
+$carrier = new TroopCarrier();
+$carrier->addUnit(new Cavalry());
+
+print_r(UnitScript::joinExisting($carrier, $army));
