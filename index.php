@@ -10,6 +10,7 @@ require ROOT."/vendor/autoload.php";
 
 /**
  * @param $chapter
+ * @param $topic
  * @throws Exception
  */
 function includeIndexFile( $chapter, $topic )
@@ -25,5 +26,4 @@ try{
     includeIndexFile( $_GET['chapter'], $_GET['topic'] );
 } catch (Exception $e) {
     echo $e->getMessage();
-
 }
