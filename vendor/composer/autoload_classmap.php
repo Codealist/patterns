@@ -47,6 +47,8 @@ return array(
     'Plains' => $baseDir . '/9/Civilization/Terrain.php',
     'Preferences' => $baseDir . '/9/Preferences/Preferences.php',
     'ProcessRequest' => $baseDir . '/10/WebRequest/Process.php',
+    'Product' => $baseDir . '/10/Facade/Product.php',
+    'ProductFacade' => $baseDir . '/10/Facade/ProductFacade.php',
     'RegistrationMgr' => $baseDir . '/8/Lessons/reg.php',
     'RequestHelper' => $baseDir . '/10/WebRequest/Request.php',
     'Sea' => $baseDir . '/9/Civilization/Terrain.php',

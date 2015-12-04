@@ -22,3 +22,4 @@ abstract class DecorateProcess extends ProcessRequest
         $this->process_request = $pr;
     }
 }
+
