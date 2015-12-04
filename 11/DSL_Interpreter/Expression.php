@@ -68,6 +68,41 @@ class VariableExpression extends Expression
     {
         return $this->name;
     }
+}
 
 
+abstract class OperatorExpression extends Expression
+{
+    protected $l_op;
+    protected $r_op;
+
+    public function __construct(Expression $left, Expression $right)
+    {
+        $this->l_op = $left;
+        $this->r_op = $right;
+    }
+
+    public function interpret(InterpreterContext $context)
+    {
+        $this->l_op->interpret( $context );
+        $this->r_op->interpret( $context );
+        $result_l = $context->lookup($this->l_op);
+        $result_r = $context->lookup($this->r_op);
+        $this->doInterpret($context, $result_l, $result_r);
+    }
+
+    protected abstract function doInterpret(InterpreterContext $context, $result_l, $result_r);
+}
+
+class EqualsExpression extends OperatorExpression
+{
+    protected function doInterpret(InterpreterContext $context, $result_l, $result_r)
+    {
+        $context->replace($this, $result_l === $result_r);
+    }
+}
+
+class BooleanOrExpression extends OperatorExpression
+{
+    
 }
