@@ -54,4 +54,9 @@ return array(
     'Unit' => $baseDir . '/10/Civilization/Unit.php',
     'UnitScript' => $baseDir . '/10/Civilization/UnitScript.php',
     'WellConnected' => $baseDir . '/9/Minions/Employee.php',
+    'chapter10\\DiamondDecorator' => $baseDir . '/10/Civilization/Tile.php',
+    'chapter10\\Plains' => $baseDir . '/10/Civilization/Tile.php',
+    'chapter10\\PollutionDecorator' => $baseDir . '/10/Civilization/Tile.php',
+    'chapter10\\Tile' => $baseDir . '/10/Civilization/Tile.php',
+    'chapter10\\TileDecorator' => $baseDir . '/10/Civilization/Tile.php',
 );

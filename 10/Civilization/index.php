@@ -1,4 +1,10 @@
 <?php
+use chapter10\DiamondDecorator;
+use chapter10\Plains;
+use chapter10\PollutionDecorator;
+
+
+
 
 
 $factory = new TerrainFactory(
@@ -9,6 +15,7 @@ $factory = new TerrainFactory(
 print_r($factory->getSea());
 print_r($factory->getForest());
 print_r($factory->getPlains());
+echo "<hr/>";
 
 //TODO 216-217 page
 
@@ -28,9 +35,16 @@ $army->addUnit($sub_army);
 
 
 echo "Attack power is equal to: ". $army->bombardStrength();
+echo "<hr/>";
+
+$tile = new DiamondDecorator( new PollutionDecorator( new Plains() ) );
+echo $tile->getWealthFactor();
+echo "<hr/>";
+
 
 $carrier = new TroopCarrier();
 $carrier->addUnit(new Cavalry());
 
 print_r(UnitScript::joinExisting($carrier, $army));
+
 
