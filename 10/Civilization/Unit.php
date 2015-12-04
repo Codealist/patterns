@@ -2,21 +2,18 @@
 
 abstract class Unit
 {
+    /**
+     * @return int
+     */
     abstract public function bombardStrength();
-}
 
-class Archer extends Unit
-{
-    public function bombardStrength()
+    /**
+     * Blocker
+     * @return null
+     */
+    public function getComposite()
     {
-        return 4;
+        return null;
     }
 }
 
-class LaserCannonUnit extends Unit
-{
-    public function bombardStrength()
-    {
-        return 44;
-    }
-}
